@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/*----------reset--------------*/
+html {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%; }
+
+html, body {
+  -webkit-user-select: none;
+  user-select: none; }
+
+body {
+  min-height: 100%; }
+
+html, body, div, object, iframe, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, address, dl, dt, dd, ol, ul, li, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, progress {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  background-color: transparent; }
+
+li {
+  list-style: none; }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0;
+  -webkit-touch-callout: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+a, button, input, optgroup, select, textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  -webkit-appearance: none;
+  outline: none;
+  line-height: normal; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+.combo_contain {
+  padding: 0 10px;
+  margin: 20px 0 60px 0; }
+
+.disabled {
+  background-color: #c2c2c2 !important;
+  color: #f0f0f0 !important; }
+
+/*---------------文章-------------*/
+.article_logo {
+  width: 100%; }
+  .article_logo img {
+    width: 100%; }
+
+.article_list {
+  overflow: hidden;
+  box-shadow: 3px 3px 9px 1px #e2e2e2;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  border-radius: 10px; }
+
+.article_content {
+  width: 45%;
+  float: left; }
+
+.article_title {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden; }
+
+.article_time {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #666666; }
+
+.article_img {
+  float: right;
+  width: 40%; }
+  .article_img img {
+    width: 100%; }
+
+.footer_color i {
+  color: #09BB07 !important; }
+.footer_color span {
+  color: #09BB07 !important; }
+
+/*---------底部导航------------*/
+#footerGuid {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #F7F7FA;
+  border-top: 0.5px solid #C0BFC4; }
+  #footerGuid > ul {
+    width: 100%;
+    list-style: none;
+    overflow: hidden; }
+    #footerGuid > ul li {
+      width: 20%;
+      float: left;
+      text-align: center; }
+      #footerGuid > ul li i {
+        margin-top: 3px;
+        display: block;
+        color: #616161; }
+      #footerGuid > ul li span {
+        font-size: 10px;
+        margin-top: 0;
+        display: inherit;
+        color: #999999; }
+
+/*----------微信绑定------------*/
+#bind {
+  padding: 0 10px;
+  height: 100%; }
+
+.isSend_btn {
+  background-color: #c1c1c1 !important; }
+
+.phone_area {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto; }
+  .phone_area > div {
+    width: 100%;
+    vertical-align: middle; }
+
+.phone_bg {
+  padding: 20px;
+  border-radius: 15px;
+  height: 30%;
+  box-shadow: 3px 10px 20px 4px #e2e2e2;
+  background-color: #ffffff;
+  overflow: hidden; }
+  .phone_bg > div {
+    margin-top: 10px; }
+
+.phone_input {
+  position: relative; }
+  .phone_input:first-of-type {
+    border-bottom: 0.5px solid #C0BFC4;
+    margin-bottom: 10px; }
+  .phone_input input {
+    width: 59%; }
+    .phone_input input:first-of-type {
+      margin-bottom: 10px; }
+  .phone_input span {
+    font-size: 10px;
+    display: inline-block;
+    background-color: #78da77;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: #ffffff; }
+
+.phone_card {
+  margin-top: 20px;
+  font-size: 12px; }
+  .phone_card > p {
+    margin-bottom: 10px; }
+  .phone_card > div {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    height: 40%;
+    box-shadow: 3px 10px 20px 4px #e2e2e2; }
+    .phone_card > div > div {
+      padding-left: 15px; }
+      .phone_card > div > div:first-of-type {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 0; }
+      .phone_card > div > div > i {
+        position: absolute;
+        right: 0;
+        top: 12px; }
+      .phone_card > div > div input {
+        width: 100%; }
+
+.phone_btn {
+  margin-top: 25px; }
+
+/*--------------订单---------------*/
+.order_userInfo {
+  overflow: hidden;
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+  .order_userInfo > div {
+    width: 75%;
+    text-align: center;
+    float: left; }
+    .order_userInfo > div:first-of-type {
+      width: 25%; }
+    .order_userInfo > div > label {
+      color: #666666;
+      font-size: 14px; }
+    .order_userInfo > div > span {
+      color: #000000;
+      font-size: 16px; }
+
+.order_product_fa {
+  margin-bottom: 30px; }
+
+.order_product {
+  width: 100%;
+  min-height: 20%;
+  border-radius: 15px;
+  box-shadow: 2px 6px 20px 4px #e2e2e2;
+  background-color: #ffffff;
+  transition: transform .2s; }
+  .order_product > div {
+    padding: 20px; }
+    .order_product > div > h6 {
+      font-size: 14px;
+      color: #666666; }
+    .order_product > div > p {
+      color: #676767;
+      font-weight: bolder;
+      font-size: 20px; }
+
+.order_close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #C0BFC4;
+  border-radius: 50%;
+  text-align: center; }
+  .order_close i {
+    color: #666666;
+    line-height: 29px; }
+
+.order_list > ul {
+  list-style: none; }
+  .order_list > ul li {
+    overflow: hidden;
+    padding: 8px 10px;
+    border-bottom: 0.5px solid #C0BFC4;
+    height: 25px; }
+    .order_list > ul li:last-of-type {
+      border-bottom: none; }
+    .order_list > ul li > p {
+      font-size: 14px;
+      font-weight: bold;
+      float: left;
+      color: #5a5a5a;
+      line-height: 25px; }
+
+.order_list_single {
+  font-size: 14px;
+  font-weight: bolder;
+  float: right;
+  padding: 3px 15px;
+  border-radius: 20px;
+  background-color: #efefef;
+  color: #487ee4; }
+
+.order_arr_right {
+  float: right;
+  line-height: 45px;
+  width: 30px;
+  text-align: center; }
+  .order_arr_right > i {
+    transform: rotate(90deg);
+    font-size: 18px;
+    transition: all .2s linear;
+    display: inline-block;
+    width: 10px;
+    height: 10px; }
+
+/*-----------会员卡----------------*/
+.member_card {
+  height: 120px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 6px 20px 4px #e2e2e2;
+  margin-bottom: 30px;
+  -webkit-transform: rotate(0deg); }
+
+.member_card_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: bgMove 20s infinite .5s;
+  background: url("../src/assets/picc.jpg") no-repeat 0px -47px;
+  background-size: cover; }
+
+@keyframes bgMove {
+  0% {
+    transform: scale(1);
+    filter: blur(0); }
+  50% {
+    transform: scale(1.5);
+    filter: blur(5px); }
+  100% {
+    transform: scale(1);
+    filter: blur(0); } }
+@-webkit-keyframes bgMove {
+  0% {
+    transform: scale(1);
+    filter: blur(0); }
+  50% {
+    transform: scale(1.5);
+    filter: blur(5px); }
+  100% {
+    transform: scale(1);
+    filter: blur(0); } }
+.member_card_num {
+  position: relative; }
+  .member_card_num > label {
+    font-size: 14px;
+    color: #666666; }
+  .member_card_num > span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #676767; }
+
+.member_card_money {
+  position: absolute;
+  overflow: hidden;
+  bottom: 10px;
+  left: 20px;
+  width: 100%; }
+  .member_card_money > div {
+    float: left;
+    width: 50%; }
+    .member_card_money > div > label {
+      display: inline-block;
+      width: 50px;
+      font-size: 14px; }
+    .member_card_money > div > span {
+      display: inline-block;
+      width: 50px;
+      font-size: 20px;
+      font-weight: bolder;
+      color: #232323; }
+    .member_card_money > div:last-of-type {
+      position: relative;
+      top: 3px; }
+      .member_card_money > div:last-of-type > span {
+        font-size: 14px;
+        font-weight: normal;
+        color: #000000; }
+
+.member_orderList {
+  padding: 10px 20px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 2px 6px 20px 4px #e2e2e2; }
+
+.member_orderList_detail {
+  overflow: hidden;
+  min-height: 50px;
+  border-bottom: 0.5px solid #C0BFC4;
+  position: relative; }
+  .member_orderList_detail:last-of-type {
+    border-bottom: none; }
+  .member_orderList_detail > i {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    transition: all .2s linear;
+    transform: rotate(90deg);
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    color: #676767;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 20px; }
+  .member_orderList_detail > P {
+    font-weight: bolder;
+    color: #676767; }
+  .member_orderList_detail > div {
+    padding: 0 10px; }
+    .member_orderList_detail > div > span {
+      font-size: 14px;
+      color: #5a5a5a; }
+      .member_orderList_detail > div > span:last-of-type {
+        float: right; }
+
+.order_hidden_dg {
+  display: none;
+  padding: 0 15px 5px 15px; }
+  .order_hidden_dg > div > label {
+    color: #5a5a5a;
+    font-size: 14px;
+    display: inline-block;
+    width: 25%;
+    text-align: left; }
+  .order_hidden_dg > div > span {
+    font-size: 16px; }
+
+/*---------报告---------------*/
+.report_date {
+  float: left;
+  margin-left: 10%;
+  font-size: 12px;
+  color: #5a5a5a;
+  line-height: 28px; }
+
+/*-----------绑卡--------------*/
+.card_contain {
+  padding: 0 10px; }
+
+/*-----------绑定用户---------*/
+.input_checkBox {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px; }
+  .input_checkBox i {
+    position: absolute;
+    top: -1px;
+    color: #ffffff; }
+
+.input_checkBox_bg {
+  background-color: #1aad19; }
+
+/*------------用户------------*/
+.user_list {
+  height: 50px !important; }
+  .user_list > aside {
+    margin-left: 4%;
+    color: #787878; }
+  .user_list > a {
+    margin-top: 10px; }
+
+.user_pic {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #adb8d4;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 21px; }
+
+/*# sourceMappingURL=index.css.map */
