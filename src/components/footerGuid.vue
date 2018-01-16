@@ -1,23 +1,23 @@
 <template>
   <footer id="footerGuid">
     <ul>
-      <li @touchmove="move" @touchend="toNav" :class="{footer_color: isNav}">
+      <li @click="toNav" :class="{footer_color: isNav}">
         <i class="fa fa-2x fa-home"></i>
         <span>{{ page1 }}</span>
       </li>
-      <li @touchmove="move" @touchend="toOrder" :class="{footer_color: isOrder}">
+      <li @click="toOrder" :class="{footer_color: isOrder}"><!--@touchmove="move" @touchend="toOrder"-->
         <i class="fa fa-2x fa-print"></i>
         <span>{{ page2 }}</span>
       </li>
-      <li @touchmove="move" @touchend="toMember" :class="{footer_color: isMember}">
+      <li @click="toMember" :class="{footer_color: isMember}">
         <i class="fa fa-2x fa-id-card"></i>
         <span>{{ page3 }}</span>
       </li>
-      <li @touchmove="move" @touchend="toReport" :class="{footer_color: isReport}">
+      <li @click="toReport" :class="{footer_color: isReport}">
         <i class="fa fa-2x fa-file-text-o"></i>
         <span>{{ page4 }}</span>
       </li>
-      <li @touchmove="move" @touchend="toUser" :class="{footer_color: isUser}">
+      <li @click="toUser" :class="{footer_color: isUser}">
         <i class="fa fa-2x fa-user-circle-o"></i>
         <span>{{ page5 }}</span>
       </li>

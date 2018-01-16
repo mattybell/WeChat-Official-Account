@@ -4,7 +4,7 @@
       <div class="order_product">
         <div>
           <transition :duration="{enter: 800, leave: 0}" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown">
-            <a class="order_close" v-if="isCheckedArr" @touchmove="move" @touchend="shrink">
+            <a class="order_close" v-if="isCheckedArr" @touchend="shrink">
               <i class="fa fa-times"></i>
             </a>
           </transition>
