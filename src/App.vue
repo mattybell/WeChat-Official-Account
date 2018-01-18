@@ -5,11 +5,10 @@
     </div>-->
     <transition
       mode="out-in"
-      enter-active-class="fadeInUp"
-      leave-active-class="fadeOutDown"
+      name="header"
       appear
     >
-      <router-view class="animated content_center"></router-view>
+      <router-view class="content_center"></router-view>
     </transition>
     <footer-guid v-if="footer"></footer-guid>
   </div>
@@ -74,12 +73,28 @@ export default {
     flex-wrap: wrap;
     align-items: center;
   }
-.center{
-  margin: 0 auto;
-  width: 25%;
-}
   .content_center{
     width: 100%;
+  }
+  .header-enter, .header-leave-to{
+    opacity: 0;
+    -webkit-transform: scale(0);
+  }
+  .header-enter-active{
+    -webkit-animation: lights .5s ease-in;
+  }
+  .header-leave-active{
+    -webkit-animation: lights .5s ease-in reverse;
+  }
+  @-webkit-keyframes lights {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+    }
   }
 </style>
 

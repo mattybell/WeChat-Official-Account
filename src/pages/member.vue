@@ -21,7 +21,7 @@
       <ul>
         <li v-for="item in orderList" class="member_orderList_detail">
           <i class="fa fa-sort-up"></i>
-          <p class="order_consume" @touchmove="move" @touchend="consume">订单消费</p>
+          <p class="order_consume" @click="consume">订单消费</p>
           <div class="order_consume_control">
             <span>RO20171221</span>
             <span>2017-12-21</span>
