@@ -222,10 +222,10 @@ td, th {
   #footerGuid > ul {
     width: 100%;
     list-style: none;
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around; }
     #footerGuid > ul li {
-      width: 20%;
-      float: left;
       text-align: center; }
       #footerGuid > ul li i {
         margin-top: 3px;
