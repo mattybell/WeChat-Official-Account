@@ -38,6 +38,10 @@
       computed: mapState([
         'page1'
       ]),
+      create () {
+
+        // source.cancel('Operation canceled by the user.');
+      },
       mounted(){
         document.title = this.page1
       },
